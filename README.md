@@ -1,6 +1,7 @@
-# ToDoList
+# Week-11-Module-01
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
+Esse projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 14.0.3 para os alunos do `DEVIn[Philips]` para a semana 11 do módulo 01.
+Aulas ministradas pela professora Rayane.
 
 ## Development server
 
