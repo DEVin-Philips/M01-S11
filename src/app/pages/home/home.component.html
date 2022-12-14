@@ -1,31 +1,26 @@
 <div class="col-12">
-    <table class="table table-striped table-dark table-hover">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <table class="table table-striped table-dark table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#id</th>
+        <th scope="col">Posição no array</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Diretor</th>
+        <th scope="col">Data de lançamento</th>
+        <th scope="col">Nota</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Observe que eu criei outra variável para armazenar a posição que só é
+      reconhecida com a palavra reservada index -->
+      <tr *ngFor="let filme of filmes; let i = index">
+        <td>#{{ filme.id }}</td>
+        <td>{{ i }}</td>
+        <td>{{ filme.nome }}</td>
+        <td>{{ filme.diretor }}</td>
+        <td>{{ filme.data }}</td>
+        <td>{{ filme.nota }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

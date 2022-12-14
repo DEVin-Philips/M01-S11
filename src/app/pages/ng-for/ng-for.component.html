@@ -1,0 +1,25 @@
+<h3>Primeiro exemplo</h3>
+
+<div class="mt-5">
+  <p>Lista de compras</p>
+
+  <p>
+    A declaração do ngFor faz com que seja percorrido um array e a cada item do
+    array será armazenado na variável indicada apos a palavra 'let'. No exemplo
+    abaixo ela se chama <strong>item</strong>
+  </p>
+
+  <!-- 
+    Caso deseje imprimir todo o objeto será necessário a chamada do pipe json 
+    <ul>
+    <li *ngFor="let item of compras">
+      {{ item | json }}
+    </li>
+  </ul> -->
+
+  <ul>
+    <li *ngFor="let item of compras">
+      {{ item.nome }} - {{ item.valor | currency : "BRL" }}
+    </li>
+  </ul>
+</div>

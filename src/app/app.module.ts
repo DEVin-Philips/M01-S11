@@ -9,6 +9,9 @@ import { InfoComponent } from './pages/info/info.component';
 import { FormsModule } from '@angular/forms';
 import { SoletrandoPipe } from './pipes/soletrando.pipe';
 import { HomeComponent } from './pages/home/home.component';
+import { Slide8Component } from './components/slide8/slide8.component';
+import { ExerciciosComponent } from './pages/exercicios/exercicios.component';
+import { NgForComponent } from './pages/ng-for/ng-for.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { HomeComponent } from './pages/home/home.component';
     CreateComponent,
     InfoComponent,
     SoletrandoPipe,
-    HomeComponent
+    HomeComponent,
+    Slide8Component,
+    ExerciciosComponent,
+    NgForComponent
   ],
   imports: [
     BrowserModule,

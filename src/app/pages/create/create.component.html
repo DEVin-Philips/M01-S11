@@ -1,1 +1,44 @@
-<p>create works!</p>
+<div>
+  <div class="mb-3">
+    <label class="form-label">Nome</label>
+    <input type="text" class="form-control" [(ngModel)]="nome" />
+    <!-- Uso do ngIf sem o else -->
+    <div class="alert alert-danger" role="alert" *ngIf="!nome.length">
+      Digite um valor. Campo obrigatório*
+    </div>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Diretor</label>
+    <input type="text" class="form-control" [(ngModel)]="diretor" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Data de lançamento</label>
+    <input type="date" class="form-control" [(ngModel)]="dataLancamento" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Nota</label>
+    <input type="number" class="form-control" [(ngModel)]="nota" />
+    <!-- Como no exemplo abaixo é utilizado o else ele irá chamar um outro template
+    html, indicado mais abaixo, para caso não entre na primeira verificação ele 
+    chame o else. -->
+    <div
+      class="alert alert-danger"
+      role="alert"
+      *ngIf="nota < 0 || nota > 5; else validou"
+    >
+      O valor deve ser entre 0 e 5.
+    </div>
+
+    <!-- O uso do ng-template só será necessário caso utilize o else no ngIf -->
+    <ng-template #validou>
+      <div class="alert alert-success" role="alert">Campo validado!!</div>
+    </ng-template>
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" [(ngModel)]="favorito" />
+    <label class="form-check-label" for="exampleCheck1">Favorito?</label>
+  </div>
+  <button type="button" class="btn btn-success" (click)="salvar()">
+    Enviar
+  </button>
+</div>
