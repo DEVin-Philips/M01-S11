@@ -12,6 +12,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { Slide8Component } from './components/slide8/slide8.component';
 import { ExerciciosComponent } from './pages/exercicios/exercicios.component';
 import { NgForComponent } from './pages/ng-for/ng-for.component';
+import { Slide11Component } from './components/slide11/slide11.component';
+import { CpfPipe } from './pipes/cpf.pipe';
+import { NgSwitchComponent } from './pages/ng-switch/ng-switch.component';
+import { Slide13Component } from './components/slide13/slide13.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { NgForComponent } from './pages/ng-for/ng-for.component';
     HomeComponent,
     Slide8Component,
     ExerciciosComponent,
-    NgForComponent
+    NgForComponent,
+    Slide11Component,
+    CpfPipe,
+    NgSwitchComponent,
+    Slide13Component
   ],
   imports: [
     BrowserModule,

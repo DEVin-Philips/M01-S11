@@ -1,7 +1,13 @@
 <div>
   <div class="mb-3">
     <label class="form-label">Nome</label>
-    <input type="text" class="form-control" [(ngModel)]="nome" />
+    <!-- Com o ngClas atraves de uma condição ele irá adicionar, ou não, um série de classes -->
+    <input
+      type="text"
+      class="form-control"
+      [ngClass]="{ 'border border-danger': nome.length <= 0 }"
+      [(ngModel)]="nome"
+    />
     <!-- Uso do ngIf sem o else -->
     <div class="alert alert-danger" role="alert" *ngIf="!nome.length">
       Digite um valor. Campo obrigatório*
@@ -9,7 +15,16 @@
   </div>
   <div class="mb-3">
     <label class="form-label">Diretor</label>
-    <input type="text" class="form-control" [(ngModel)]="diretor" />
+    No caso do ngStyle é esperado que após a propriedade seja passada o seu
+    valor, seja como o retorno de um if ternário ou o valor em uma variável
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="diretor"
+      [ngStyle]="{
+        border: diretor.length < 3 ? '1px solid red' : '1px solid green'
+      }"
+    />
   </div>
   <div class="mb-3">
     <label class="form-label">Data de lançamento</label>

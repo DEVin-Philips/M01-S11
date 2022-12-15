@@ -1,0 +1,22 @@
+<h3>Primeiro exemplo</h3>
+<p>
+  No caso da diretiva ngSwitch a variável lida na linha 7 (choseAlert) será
+  analisada para ver em qual caso ele se adegua, assim que a variável encontra
+  um caso igual ao dela ela irá processar aquele bloco de código
+</p>
+<div [ngSwitch]="choseAlert">
+  <input class="form-control" type="text" [(ngModel)]="choseAlert" />
+  <div *ngSwitchCase="12" class="alert alert-primary" role="alert">
+    This is a primary alert—check it out!
+  </div>
+  <div *ngSwitchCase="'20'" class="alert alert-secondary" role="alert">
+    This is a secondary alert—check it out!
+  </div>
+  <div *ngSwitchCase="'success'" class="alert alert-success" role="alert">
+    This is a success alert—check it out!
+  </div>
+
+  <div *ngSwitchDefault class="alert alert-dark" role="alert">
+    This is a success alert-dark it out!
+  </div>
+</div>

@@ -5,12 +5,14 @@ import { ExerciciosComponent } from './pages/exercicios/exercicios.component';
 import { HomeComponent } from './pages/home/home.component';
 import { InfoComponent } from './pages/info/info.component';
 import { NgForComponent } from './pages/ng-for/ng-for.component';
+import { NgSwitchComponent } from './pages/ng-switch/ng-switch.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'create', component: CreateComponent },
   { path: 'info-pipe', component: InfoComponent },
   { path: 'info-ngfor', component: NgForComponent },
+  { path: 'info-ngswitch', component: NgSwitchComponent },
   { path: 'exercicios', component: ExerciciosComponent },
   {
     path: '**',

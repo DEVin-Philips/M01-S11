@@ -1,0 +1,9 @@
+<!-- Exercício do slide 11 - aula 02 - semana 11 -->
+
+<!-- Será percorrido o array 'compras' onde cada item momentaneamente irá armazenar
+na variável 'item o seu valor' -->
+<ul>
+  <li *ngFor="let item of compras">
+    {{ item.nome }} - {{ item.valor | currency : "BRL" }}
+  </li>
+</ul>

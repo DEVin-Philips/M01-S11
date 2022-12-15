@@ -1,0 +1,32 @@
+<p>Exercício do slide 13 - aula 3 - semana 11</p>
+
+<select class="form-select" [(ngModel)]="selecionado">
+  <option *ngFor="let item of arrayGeneros; let i = index" [value]="item">
+    {{ item }} - {{ i }}
+  </option>
+</select>
+
+<p>Filme:</p>
+<!-- o valor de selecionado é lido  -->
+<div [ngSwitch]="selecionado">
+    <!-- Caso seja igual a 'Comédia', ele processa o container html abaixo -->
+  <h4 *ngSwitchCase="'Comédia'">
+    <strong>Todo mundo em pânico</strong>
+  </h4>
+
+  <!-- Mesma coisa com os demais -->
+  <h4 *ngSwitchCase="'Terror'">
+    <strong>Anabelle</strong>
+  </h4>
+  <h4 *ngSwitchCase="'Ação'">
+    <strong>Missão impossível</strong>
+  </h4>
+  <h4 *ngSwitchCase="'Drama'">
+    <strong>Quem quer ser um milionário</strong>
+  </h4>
+  <!-- Caso a variável 'selecionado' não se adeque a nenhum dos ngSwitchCase ele irá
+  processar o container abaixo, por conta do ngSwitchDefault -->
+  <h4 *ngSwitchDefault>
+    <strong>Selecione um gênero</strong>
+  </h4>
+</div>
