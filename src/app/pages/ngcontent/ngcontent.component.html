@@ -1,0 +1,29 @@
+<!-- O que irá ir dentro do seletor do componente (dentro da tag app-card) dependendo
+do seletor irá cair dentro do componente onde terá a tag ng-content -->
+<app-card>
+  <strong class="titulo">oi oi</strong>
+  <p class="corpo">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia excepturi nam
+    doloremque distinctio veniam fugit quam maiores sit architecto delectus
+    rerum voluptates, mollitia, ipsa repudiandae, numquam quisquam! Recusandae,
+    voluptas. Id!
+  </p>
+</app-card>
+
+<!-- Mesmo que hajá a repetição do seletor o que o ng-content irá fazer é encadear
+todas as chamadas dos seletores - veja no exemplo abaixo -->
+<app-card>
+  <div class="corpo">
+    <a class="btn btn-dark">Não Clique aqui</a>
+  </div>
+  <h5 class="titulo">Título</h5>
+  <div class="corpo">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est atque quod
+      enim voluptatum natus, optio cumque nemo nihil, voluptatibus rerum
+      doloribus iure maiores! Accusamus minus ullam error, soluta consectetur
+      ratione.
+    </p>
+    <a class="btn btn-primary">Clique aqui</a>
+  </div>
+</app-card>

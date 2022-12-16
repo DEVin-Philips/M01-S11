@@ -16,6 +16,10 @@ import { Slide11Component } from './components/slide11/slide11.component';
 import { CpfPipe } from './pipes/cpf.pipe';
 import { NgSwitchComponent } from './pages/ng-switch/ng-switch.component';
 import { Slide13Component } from './components/slide13/slide13.component';
+import { CardComponent } from './components/card/card.component';
+import { Slide06Component } from './components/slide06/slide06.component';
+import { Slide09Component } from './components/slide09/slide09.component';
+import { NgcontentComponent } from './pages/ngcontent/ngcontent.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,11 @@ import { Slide13Component } from './components/slide13/slide13.component';
     Slide11Component,
     CpfPipe,
     NgSwitchComponent,
-    Slide13Component
+    Slide13Component,
+    CardComponent,
+    Slide06Component,
+    Slide09Component,
+    NgcontentComponent
   ],
   imports: [
     BrowserModule,

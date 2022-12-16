@@ -1,0 +1,13 @@
+<!-- Exercício do slide 09 - aula 03 - semana 11 -->
+
+<input type="text" [(ngModel)]="tamanhoFonte" />
+
+<br/>
+
+<button 
+    [ngStyle]="
+    {'backgroundColor': verificaBackgroundColor(), 
+     'border' : verificaBorder(),
+     'fontSize': tamanhoFonte+'px'}">
+    Salvar
+</button>
