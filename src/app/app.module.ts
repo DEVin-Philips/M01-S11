@@ -20,6 +20,7 @@ import { CardComponent } from './components/card/card.component';
 import { Slide06Component } from './components/slide06/slide06.component';
 import { Slide09Component } from './components/slide09/slide09.component';
 import { NgcontentComponent } from './pages/ngcontent/ngcontent.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { NgcontentComponent } from './pages/ngcontent/ngcontent.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    RouterModule
   ],
   providers: [],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],

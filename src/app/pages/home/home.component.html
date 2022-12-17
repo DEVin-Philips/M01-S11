@@ -8,6 +8,7 @@
         <th scope="col">Diretor</th>
         <th scope="col">Data de lançamento</th>
         <th scope="col">Nota</th>
+        <th scope="col">Ações</th>
       </tr>
     </thead>
     <tbody>
@@ -20,6 +21,10 @@
         <td>{{ filme.diretor }}</td>
         <td>{{ filme.data }}</td>
         <td>{{ filme.nota }}</td>
+        <td>
+          <button type="button" class="btn btn-link" (click)="editMovie(i)">Editar</button>
+          <button type="button" class="btn btn-link" (click)="deleteMovie(i)">Deletar</button>
+        </td>
       </tr>
     </tbody>
   </table>

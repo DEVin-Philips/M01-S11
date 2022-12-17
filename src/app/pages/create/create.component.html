@@ -5,11 +5,12 @@
     <input
       type="text"
       class="form-control"
-      [ngClass]="{ 'border border-danger': nome.length <= 0 }"
-      [(ngModel)]="nome"
+      [ngClass]="{ 'border border-danger': verificaNome() }"
+      [(ngModel)]="filme.nome"
+      #inputNomeTag
     />
     <!-- Uso do ngIf sem o else -->
-    <div class="alert alert-danger" role="alert" *ngIf="!nome.length">
+    <div class="alert alert-danger" role="alert" *ngIf="verificaNome()">
       Digite um valor. Campo obrigatório*
     </div>
   </div>
@@ -17,29 +18,37 @@
     <label class="form-label">Diretor</label>
     <!-- No caso do ngStyle é esperado que após a propriedade seja passada o seu
     valor, seja como o retorno de um if ternário ou o valor em uma variável -->
+
     <input
       type="text"
       class="form-control"
-      [(ngModel)]="diretor"
-      [ngStyle]="{
-        border: diretor.length < 3 ? '1px solid red' : '1px solid green'
+      [(ngModel)]="filme.diretor"
+      [ngClass]="{
+        'border border-danger': verificaDiretor()
       }"
+      minlength="3"
+      required
+      #inputDiretorTag
     />
   </div>
   <div class="mb-3">
     <label class="form-label">Data de lançamento</label>
-    <input type="date" class="form-control" [(ngModel)]="dataLancamento" />
+    <input
+      type="date"
+      class="form-control"
+      [(ngModel)]="filme.dataLancamento"
+    />
   </div>
   <div class="mb-3">
     <label class="form-label">Nota</label>
-    <input type="number" class="form-control" [(ngModel)]="nota" />
+    <input type="number" class="form-control" [(ngModel)]="filme.nota" />
     <!-- Como no exemplo abaixo é utilizado o else ele irá chamar um outro template
     html, indicado mais abaixo, para caso não entre na primeira verificação ele 
     chame o else. -->
     <div
       class="alert alert-danger"
       role="alert"
-      *ngIf="nota < 0 || nota > 5; else validou"
+      *ngIf="filme.nota < 0 || filme.nota > 5; else validou"
     >
       O valor deve ser entre 0 e 5.
     </div>
@@ -50,7 +59,11 @@
     </ng-template>
   </div>
   <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" [(ngModel)]="favorito" />
+    <input
+      type="checkbox"
+      class="form-check-input"
+      [(ngModel)]="filme.favorito"
+    />
     <label class="form-check-label" for="exampleCheck1">Favorito?</label>
   </div>
   <button type="button" class="btn btn-success" (click)="salvar()">
